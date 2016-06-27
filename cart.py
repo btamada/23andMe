@@ -158,7 +158,7 @@ class Cart:
                 (By.CSS_SELECTOR, "div.cart-details-row:nth-child(4)>.price-summary>div.price-display")))
             savamt = self.driver.find_element_by_css_selector(
                 "div.cart-details-row:nth-child(4)>.price-summary>div.price-display").text
-            calcsavamt = '$' + '{0:.2f}'.format(int((199.00 * (self.getsubtotalqty() - 1) * 0.1)))
+            calcsavamt = '$' + '{0:.2f}'.format((199.00 * (self.getsubtotalqty() - 1) * 0.1))
             assert savamt == calcsavamt
         except TimeoutException as te:
             print(te.message)
@@ -177,7 +177,7 @@ class Cart:
                 (By.CSS_SELECTOR, "div.cart-details-row:nth-child(5)>.price-summary>div.price-display")))
             grandamt = self.driver.find_element_by_css_selector(
                 "div.cart-details-row:nth-child(5)>.price-summary>div.price-display").text
-            calcgrandamt = '$' + '{0:.2f}'.format(int( (199.00 * self.getsubtotalqty()) - (199.00 * (self.getsubtotalqty() - 1) * 0.1)))
+            calcgrandamt = '$' + '{0:.2f}'.format((199.00 * self.getgrandtotalqty()) - (199.00 * (self.getgrandtotalqty() - 1) * 0.1))
             assert grandamt == calcgrandamt
         except TimeoutException as te:
             print(te.message)

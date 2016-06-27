@@ -32,19 +32,19 @@ class Billing:
         """ Verify payment section content is correct """
         print('verifypaymentsection')
         time.sleep(10)
-        assert 'Payment' in self.driver.current_url
-        assert 'Billing address' in self.driver.current_url
-        assert 'Card number' in self.driver.current_url
-        assert 'Exp date' in self.driver.current_url
-        assert 'CVV' in self.driver.current_url
-        assert self.cartInst.getgrandtotalamt() in self.driver.current_url
+        assert 'Payment' in self.driver.page_source
+        assert 'Billing address' in self.driver.page_source
+        assert 'Card number' in self.driver.page_source
+        assert 'Exp date' in self.driver.page_source
+        assert 'CVV' in self.driver.page_source
+        assert self.cartInst.getgrandtotalamt() in self.driver.page_source
 
     def verifyBillingSection(self):
         """ Verify billing address content is correct """
         print('verifybillingsection')
         time.sleep(10)
-        assert 'Use same as shipping' in self.driver.current_url
-        assert 'Enter a new address' in self.driver.current_url
+        assert 'Use same as shipping' in self.driver.page_source
+        assert 'Enter a new address' in self.driver.page_source
 
     # click the continue button
     def clickContBtn(self):
