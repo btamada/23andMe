@@ -1,5 +1,7 @@
 # 23andMe
 Selenium Test Automation Framework (Python)
+[Requirement] Python 2.7
+
 
 How do you run this thing?
 
