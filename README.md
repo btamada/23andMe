@@ -3,12 +3,20 @@ Selenium Test Automation Framework (Python)
 
 [Requirement] Python 2.7
 
+---
 
 How do you run this thing?
 
-1) Open up a terminal session
+1) I used the Chrome web browser for testing, so modify the checkout.py script so that it is pointing to your local chromedriver
 
-2) Run the following command:
+[Line 19] self.driver = webdriver.Chrome('/your/path/to/chromedriver')
+
+2) Open up a terminal session
+
+3) Run the following command:
+
    python checkout.py
+   
+   [Note: Please use Python 2.7]
 
-3) Watch the amazingness ensue!
+4) Watch the amazingness ensue!
